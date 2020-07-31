@@ -6,14 +6,14 @@ function GameRunner() {
   this._ctx = this._createCanvasContext();
   this._game = new Game();
   this._keyboard = new Keyboard(this._game);
-  
+
   this._game.getEventManager().addSubscriber(SoundManager,
     [EVENT_PELLET_EATEN,
-     EVENT_POWER_PELLET_EATEN,
-     EVENT_GHOST_EATEN,
-     EVENT_PACMAN_DIES_ANIMATION_STARTED,
-     EVENT_PLAYSCENE_READY,
-     EVENT_CHERRY_EATEN]);
+      EVENT_POWER_PELLET_EATEN,
+      EVENT_GHOST_EATEN,
+      EVENT_PACMAN_DIES_ANIMATION_STARTED,
+      EVENT_PLAYSCENE_READY,
+      EVENT_CHERRY_EATEN]);
 }
 
 GameRunner.prototype.run = function () {
@@ -31,12 +31,12 @@ GameRunner.prototype._createCanvasContext = function () {
 GameRunner.prototype._gameLoop = function () {
   this._keyboard.handleKeypresses();
   this._game.tick();
-  
+
   this._clearCanvas();
   this._game.draw(this._ctx);
 };
 
 GameRunner.prototype._clearCanvas = function () {
-  this._ctx.fillStyle = "black";
+  this._ctx.fillStyle = "#245d91";
   this._ctx.fillRect(0, 0, this._ctx.canvas.width, this._ctx.canvas.height);
 };
