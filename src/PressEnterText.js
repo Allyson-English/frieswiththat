@@ -10,10 +10,10 @@ PressEnterText.prototype.draw = function (ctx) {
   if (!this._blinkTimer.isVisible()) {
     return;
   }
-  
+
   ctx.fillStyle = "red";
   ctx.font = "bold 18px 'Lucida Console', Monaco, monospace"
-  var text = "PRESS ENTER";
+  var text = "Press Enter to Defeat the Virus";
   var textWidth = ctx.measureText(text).width;
   // Draw text in the center of the canvas.
   var x = ctx.canvas.width / 2 - textWidth / 2;
