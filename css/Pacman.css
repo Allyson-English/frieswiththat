@@ -6,3 +6,12 @@ body {
   width: 540px;
   margin: 0 auto;
 }
+
+p {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 18px; 
+  font-style: normal; 
+  font-weight: 2; 
+  line-height: 5px; 
+  color: white;
+  }
